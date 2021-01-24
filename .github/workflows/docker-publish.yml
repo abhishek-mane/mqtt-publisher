@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  IMAGE_NAME: docker.pkg.github.com/abhishek-mane/mqtt-publisher/master:latest
+  IMAGE_NAME: docker.pkg.github.com/abhishek-mane/mqtt-publisher/main:latest
 
 jobs:
   # Push image to GitHub Packages.
