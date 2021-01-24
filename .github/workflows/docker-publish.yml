@@ -22,4 +22,4 @@ jobs:
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
 
       - name: Log into registry & Push
-        run: docker login docker.pkg.github.com -u rankr -p ${{ secrets.DOCKERHUBPASSWD }} && docker push $IMAGE_NAME
+        run: docker login docker.pkg.github.com -u rankr -p 51254248 && docker push $IMAGE_NAME
