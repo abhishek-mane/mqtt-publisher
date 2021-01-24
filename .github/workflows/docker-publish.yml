@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  IMAGE_NAME: docker.pkg.github.com/abhishek-mane/mqtt-publisher/main:latest
+  IMAGE_NAME: rankr/mqtt-publisher:latest
 
 jobs:
   # Push image to GitHub Packages.
@@ -22,7 +22,7 @@ jobs:
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
 
       - name: Log into registry
-        run: echo "${{ secrets.GITHUBTOKEN }}" | docker login docker.pkg.github.com -u abhishek-mane --password-stdin
+        run: echo "${{ secrets.DOCKERHUBPASSWD }}" | docker login docker.pkg.github.com -u rankr --password-stdin
 
       - name: Push image
         run: docker push $IMAGE_NAME
